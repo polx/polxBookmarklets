@@ -16,9 +16,12 @@ Click navigate and start driving.
 
 Drag the bookmarklet to your bar:
 
-- For Apple Maps: [GoingElectric Go](javascript:'use%20strict';var%20t=function(){var%20a,b=/.*\/static\/([0-9]+.[0-9]+),([0-9]+.[0-9]+),([0-9]+)\/.*/;return%20a=document.querySelector(%22img[src^=\%22%22+%22https://api.goingelectric.de/maps/%22+%22\%22]%22).src.replace(b,%22https://maps.apple.com/%3Fsll=$2,$1%26z=$3%26q=$2,$1%22),window.location.href=a,!1};t();)
-- For Google Maps: [GoingElectric Go](javascript:'use%20strict';var%20t=function(){var%20a,b=%22https://api.goingelectric.de/maps/%22,c=/.*\/static\/([0-9]+.[0-9]+),([0-9]+.[0-9]+),([0-9]+)\/.*/;return%20a=document.querySelector(%22img[src^=\%22%22+b+%22\%22]%22).src.replace(c,%22comgooglemaps://center=$2,$1%26zoom=$3%26q=$2,$1%22),window.location.href=a,!1};t();)
+- For Apple Maps: [GoingElectric Go](javascript:void%20function(){(function(){var%20a,b=/.*\/static\/(-%3F[0-9]+.[0-9]+),(-%3F[0-9]+.[0-9]+),([0-9]+)\/.*/;return%20a=document.querySelector(%22img[src^=\%22%22+%22https://api.goingelectric.de/maps/%22+%22\%22]%22).src.replace(b,%22https://maps.apple.com/%3Fsll=$2,$1%26z=$3%26q=$2,$1%22),window.location.href=a,!1})()}();)
+- For Google Maps: [GoingElectric Go](javascript:void%20function(){(function(){var%20a,b=%22https://api.goingelectric.de/maps/%22,c=/.*\/static\/(-%3F[0-9]+.[0-9]+),(-%3F[0-9]+.[0-9]+),([0-9]+)\/.*/;return%20a=document.querySelector(%22img[src^=\%22%22+b+%22\%22]%22).src.replace(c,%22comgooglemaps://center=$2,$1%26zoom=$3%26q=$2,$1%22),window.location.href=a,!1})()}();)
 
+(note: The GH-Markdown renderer removes the javascript URLs, please 
+    see the Markdown source, download the HTML, 
+  or navigate to [a web-page](https://hoplahup.net/Bookmarklets.html))
 (note: Creating a bookmarklet on a [mobile may need a workaround](https://www.cultofmac.com/500532/how-to-add-bookmarklet-mobile-iphone-safari/))
 
 More information on the [source page](GoingElectricStromtankstelleToMaps.js).
@@ -28,6 +31,6 @@ More information on the [source page](GoingElectricStromtankstelleToMaps.js).
 - Always create visible links that users can copy and paste
 - Maintain a readable source code
 - Compress to the URL-encoded `javascript:` URL using tools such as 
-  Chris Zarate's [Bookmarleter](https://chriszarate.github.io/bookmarkleter/)
+  Chris Zarate's [Bookmarkleter](https://chriszarate.github.io/bookmarkleter/)
   (note: you need to remove comments first)
   
