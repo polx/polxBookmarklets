@@ -14,7 +14,7 @@ error-prone. Kicking this bookmarklet on the information page
 of a charging station will take the Maps application to there.
 Click navigate and start driving.
 
-Drag the bookmarklet to your bar:
+Copy the bookmarklet's URL to your bar:
 
 - For Apple Maps
     - `javascript:void%20function(){(function(){var%20a,b=/.*\/static\/(-%3F[0-9]+.[0-9]+),(-%3F[0-9]+.[0-9]+),([0-9]+)\/.*/;return%20a=document.querySelector(%22img[src^=\%22%22+%22https://api.goingelectric.de/maps/%22+%22\%22]%22).src.replace(b,%22https://maps.apple.com/%3Fsll=$2,$1%26z=$3%26q=$2,$1%22),window.location.href=a,!1})()}();`
