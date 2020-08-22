@@ -19,7 +19,7 @@ Copy the bookmarklet's URL to your bar:
 - For Apple Maps
     - `javascript:void%20function(){(function(){var%20a,b=/.*\/static\/(-%3F[0-9]+.[0-9]+),(-%3F[0-9]+.[0-9]+),([0-9]+)\/.*/;return%20a=document.querySelector(%22img[src^=\%22%22+%22https://api.goingelectric.de/maps/%22+%22\%22]%22).src.replace(b,%22https://maps.apple.com/%3Fsll=$2,$1%26z=$3%26q=$2,$1%22),window.location.href=a,!1})()}();`
 - For Google Maps
-    - `javascript:void%20function(){(function(){var%20a,b=%22https://api.goingelectric.de/maps/%22,c=/.*\/static\/(-%3F[0-9]+.[0-9]+),(-%3F[0-9]+.[0-9]+),([0-9]+)\/.*/;return%20a=document.querySelector(%22img[src^=\%22%22+b+%22\%22]%22).src.replace(c,%22comgooglemaps://center=$2,$1%26zoom=$3%26q=$2,$1%22),window.location.href=a,!1})()}();`
+    - `javascript:void%20function(){(function(){var%20a,b=%22https://api.goingelectric.de/maps/%22,c=/.*\/static\/(-%3F[0-9]+.[0-9]+),(-%3F[0-9]+.[0-9]+),([0-9]+)\/.*/;return%20a=document.querySelector(%22img[src^=\%22%22+b+%22\%22]%22).src.replace(c,%22comgooglemaps://?center=$2,$1%26zoom=$3%26q=$2,$1%22),window.location.href=a,!1})()}();`
 
 (note: The GH-Markdown renderer removes the javascript URLs, please 
     see the Markdown source, download the HTML, 

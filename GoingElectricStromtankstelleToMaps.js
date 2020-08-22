@@ -16,7 +16,7 @@ var t = function() {
     } else if (mode==='GoogleMaps') {
         url = document.querySelector('img[src^="'+srcPrefix+'"]')
             .src.replace(re,
-                'comgooglemaps://center=$2,$1&zoom=$3&q=$2,$1');
+                'comgooglemaps://?center=$2,$1&zoom=$3&q=$2,$1');
     }
     window.location.href=url;
     return false;
