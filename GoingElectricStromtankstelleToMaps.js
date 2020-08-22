@@ -10,10 +10,12 @@ var t = function() {
     var re = new RegExp('.*/static/(-?[0-9]+\.[0-9]+),(-?[0-9]+\.[0-9]+),([0-9]+)/.*');
     var url;
     if(mode==='AppleMaps') {
+        // See doc https://developer.apple.com/library/archive/featuredarticles/iPhoneURLScheme_Reference/MapLinks/MapLinks.html#//apple_ref/doc/uid/TP40007899-CH5-SW1
         url = document.querySelector('img[src^="'+srcPrefix+'"]')
             .src.replace(re,
                 'https://maps.apple.com/?sll=$2,$1&z=$3&q=$2,$1');
     } else if (mode==='GoogleMaps') {
+        // See doc at https://developers.google.com/maps/documentation/urls/ios-urlscheme
         url = document.querySelector('img[src^="'+srcPrefix+'"]')
             .src.replace(re,
                 'comgooglemaps://?center=$2,$1&zoom=$3&q=$2,$1');
